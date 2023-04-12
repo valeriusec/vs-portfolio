@@ -1,26 +1,15 @@
-import { useCallback, useState, useRef, useEffect } from "react";
-import Particles from "react-particles";
-import { loadFull } from "tsparticles";
+import ParticlesComponent from "./ParticlesComponent";
 
 import { heroOptions } from "./particlesOptions";
 
 const HeroParticles = () => {
-  const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine);
-  }, []);
-
-  const particlesLoaded = useCallback(async (container) => {
-    await container;
-  }, []);
 
   return (
     <div className="w-full h-screen">
-      <Particles
+      <ParticlesComponent
+        id='hero-particles'
         className="w-full h-screen z-0"
-        id="tsparticles"
-        init={particlesInit}
-        loaded={particlesLoaded}
-        options={heroOptions}
+        particlesOptions={heroOptions}
       />
     </div>
   );

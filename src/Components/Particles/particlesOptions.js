@@ -1,5 +1,3 @@
-import astronaut from "../../assets/astronaut/astronaut_green.svg";
-
 // Hero section tsparticles options
 
 export const heroOptions = {
@@ -17,32 +15,32 @@ export const heroOptions = {
     detectsOn: "window",
     events: {
       onDiv: [
-          {
-            selectors: "#repulse-div",
-            enable: true,
-            mode: "bounce",
-            type: "circle",
-          },
-          {
-            selectors: "#repulse-div",
-            enable: true,
-            mode: "repulse",
-            type: "circle",
-          },
-          {
-            selectors: "#repulse-span",
-            enable: true,
-            mode: "repulse",
-            type: "circle"
-          },
-          {
-            selectors: "#repulse-span",
-            enable: true,
-            mode: "bounce",
-            type: "circle"
-          },      
+        {
+          selectors: "#repulse-div",
+          enable: true,
+          mode: "bounce",
+          type: "circle",
+        },
+        {
+          selectors: "#repulse-div",
+          enable: true,
+          mode: "repulse",
+          type: "circle",
+        },
+        {
+          selectors: "#repulse-span",
+          enable: true,
+          mode: "repulse",
+          type: "circle",
+        },
+        {
+          selectors: "#repulse-span",
+          enable: true,
+          mode: "bounce",
+          type: "circle",
+        },
       ],
-      
+
       onHover: {
         enable: true,
         mode: "bubble",
@@ -60,14 +58,14 @@ export const heroOptions = {
 
     modes: {
       bounce: {
-        distance: 200,
+        distance: 100,
       },
       bubble: {
-        distance: 200,
+        distance: 100,
         duration: 0.4,
         size: 40,
         color: {
-            value: "#69c27f"
+          value: "#29c27f",
         },
         opacity: 8,
         mix: false,
@@ -106,7 +104,8 @@ export const heroOptions = {
       enable: true,
       random: false,
       size: false,
-      speed: 0.4,
+      speed: 0.8,
+      outMode: 'bounce'
     },
     number: {
       limit: 0,
@@ -117,7 +116,7 @@ export const heroOptions = {
       random: {
         enable: true,
         minimumValue: 0.4,
-        maxValue: 0.6
+        maxValue: 0.6,
       },
       value: 0.6,
       animation: {
@@ -169,8 +168,8 @@ export const heroOptions = {
       random: {
         enable: true,
         minimumValue: 25,
-        maxValue: 35
-      },  
+        maxValue: 35,
+      },
       animation: {
         count: 0,
         enable: true,
@@ -182,115 +181,18 @@ export const heroOptions = {
       },
     },
 
-    links: {
+    lineLinked: {
       blink: false,
       color: {
         value: "#ffffff",
       },
       consent: true,
-      distance: 150,
+      distance: 100,
       enable: true,
       frequency: 10,
       opacity: 0.4,
       width: 1,
     },
-  },
-  pauseOnBlur: true,
-  pauseOnOutsideViewport: true,
-  smooth: false,
-};
-
-
-
-// Astronaut SVG tsparticles options
-
-export const astronautOptions = {
-  name: "Polygon Mask",
-  autoplay: true,
-  fullScreen: {
-    enable: false,
-  },
-  detectRetina: true,
-  fpsLimit: 120,
-  interactivity: {
-    detectsOn: "canvas",
-    events: {
-      onHover: {
-        enable: true,
-        mode: "bubble",
-      },
-      resize: true,
-    },
-    modes: {
-      bubble: {
-        distance: 40,
-        duration: 2,
-        opacity: 8,
-        size: 16,
-        speed: 3,
-      },
-    },
-  },
-  particles: {
-    color: {
-      value: "#69c27f",
-    },
-    lineLinked: {
-      blink: false,
-      color: "#fff",
-      consent: false,
-      distance: 40,
-      enable: true,
-      opacity: 0.3,
-      width: 0.5,
-    },
-    move: {
-      outMode: "bounce",
-      direction: "none",
-      enable: true,
-      random: false,
-      speed: 1,
-      straight: false,
-    },
-    number: {
-      value: 300,
-    },
-    opacity: {
-      animation: {
-        enable: true,
-        minimumValue: 0.05,
-        speed: 2,
-        sync: false,
-      },
-      random: false,
-      value: 1,
-    },
-    shape: {
-      type: "circle",
-    },
-    size: {
-      random: {
-        enable: true,
-        minimumValue: 2,
-        maxValue: 4,
-      },
-    },
-  },
-  polygon: {
-    draw: {
-      enable: true,
-      lineColor: "#69c27f",
-      lineWidth: 0.3,
-    },
-    move: {
-      radius: 10,
-    },
-    inline: {
-      arrangement: "equidistant",
-    },
-    scale: 3,
-    type: "inline",
-    url: astronaut,
   },
   pauseOnBlur: true,
   pauseOnOutsideViewport: true,
