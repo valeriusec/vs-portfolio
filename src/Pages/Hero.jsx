@@ -8,6 +8,7 @@ const Hero = () => {
   return (
     <>
       <motion.div 
+      id="hero"
       className="relative w-full flex justify-center items-center ">
         <HeroText />
         <HeroParticles />

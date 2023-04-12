@@ -12,7 +12,7 @@ export const heroOptions = {
   fpsLimit: 120,
 
   interactivity: {
-    detectsOn: "window",
+    detectsOn: "#hero",
     events: {
       onDiv: [
         {
