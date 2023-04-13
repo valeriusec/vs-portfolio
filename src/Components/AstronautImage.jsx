@@ -74,3 +74,5 @@ const AstronautImage = () => {
 };
 
 export default AstronautImage;
+
+

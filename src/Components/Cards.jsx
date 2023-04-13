@@ -90,7 +90,7 @@ const Card = (props) => {
             className="h-[70%] w-[100%] rounded-t-[30px]"
           />
           <m.div
-            className="pt-10 pb-10 rounded-b-[30px] w-full h-fit absolute bg-primary-400 flex flex items-center justify-between pr-10 pl-10"
+            className="pt-10 pb-10 rounded-b-[30px] w-full h-fit absolute bg-primary-400 flex flex-col sm:flex-row items-center justify-between pr-10 pl-10"
             style={{ fontFamily: "Poppins, sans-serif" }}
           >
           
@@ -111,3 +111,4 @@ const Card = (props) => {
 };
 
 export default Card;
+

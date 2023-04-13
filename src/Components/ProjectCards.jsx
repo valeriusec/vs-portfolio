@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { AnimatePresence, LazyMotion, domAnimation, m } from "framer-motion";
+import {
+  AnimatePresence,
+  LazyMotion,
+  domAnimation,
+  motion,
+} from "framer-motion";
 
 import { projects } from "../Constants/constants";
 
@@ -19,18 +24,18 @@ const ProjectCards = () => {
   };
 
   return (
-    <LazyMotion features={domAnimation} strict>
-      <m.div
+    <LazyMotion features={domAnimation}>
+      <motion.div
         initial={{ x: -200 }}
         whileInView={{ x: 0 }}
         className="w-full h-full flex justify-center items-center "
       >
-        <m.div className="w-full h-full flex justify-center items-center relative">
+        <div className="w-full h-full flex justify-center items-center relative">
           {projects.map((project, i) => (
             <AnimatePresence key={i}>
               {index === i && (
-                <m.div className="w-full h-full absolute flex justify-center items-center">
-                  <m.div className="absolute w-full h-full z-20 cursor-grab">
+                <div className="w-full h-full absolute flex justify-center items-center">
+                  <div className="absolute w-full h-full z-20 cursor-grab">
                     <Card
                       key={`${i}-front`}
                       frontCard={true}
@@ -42,21 +47,22 @@ const ProjectCards = () => {
                       github={project.source_code_link}
                       onLoad={handleImageLoaded}
                     />
-                  </m.div>
-                  <m.div className="absolute w-full h-full z-10 cursor-grab">
+                  </div>
+                  <div className="absolute w-full h-full z-10 cursor-grab">
                     <Card
                       frontCard={false}
-                      key={index + 1}
+                      index={index}
                       background={project.image}
+                      setIndex={nextIndex}
                       onLoad={handleImageLoaded}
                     />
-                  </m.div>
-                </m.div>
+                  </div>
+                </div>
               )}
             </AnimatePresence>
           ))}
-        </m.div>
-      </m.div>
+        </div>
+      </motion.div>
     </LazyMotion>
   );
 };
