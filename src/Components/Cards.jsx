@@ -90,14 +90,15 @@ const Card = (props) => {
             className="h-[70%] w-[100%] rounded-t-[30px]"
           />
           <m.div
-            className="pt-10 pb-10 rounded-b-[30px] w-full h-fit absolute bg-primary-400 flex flex-col sm:flex-row items-center justify-between pr-10 pl-10"
+            className="pt-10 pb-10 rounded-b-[30px] w-full h-fit absolute bg-primary-400 flex flex items-center justify-between pr-10 pl-10"
             style={{ fontFamily: "Poppins, sans-serif" }}
           >
+          
             <m.div className="flex flex-col">
               <m.p className="text-2xl text-primary-50 font-bold uppercase tracking-wide">
                 {props.title}
               </m.p>
-              <m.a href={`${props.github}`}>{props.github}</m.a>
+              {/* <m.a href={`${props.github}`}>{props.github}</m.a> */}
             </m.div>
             <m.button className="bg-primary-600 pt-2 pb-2 pl-4 pr-4 rounded-2xl text-primary-200">
               Show more

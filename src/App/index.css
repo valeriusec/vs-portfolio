@@ -20,7 +20,7 @@ body {
   -webkit-overflow-x: hidden;
 }
 
-.projects {
+.overflow-hidden-web {
   overflow: hidden;
   -webkit-overflow: hidden;
 }
@@ -72,4 +72,37 @@ polyline {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.blob {
+  background-clip: content-box;
+  border: 1px solid transparent;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  -webkit-border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  -moz-border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: morph 3.6s linear infinite;
+  background: #29c27f;
+  border-collapse: separate;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.6s;
+}
+
+@keyframes morph {
+  0%,
+  100% {
+    border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+    -webkit-border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+    -moz-border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+  }
+  34% {
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+    -webkit-border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+    -moz-border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    -webkit-border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    -moz-border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  }
 }

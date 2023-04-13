@@ -8,22 +8,22 @@ const HeroText = () => {
         className="w-fit h-fit text-grayscale-50 absolute z-10 flex flex-col justify-center items-center rounded-[50%]"
         id="repulse-div"
       >
-        <h1
+        <m.h1
           className="text-center flex justify-center items-center flex-col opacity-100 text-7xl sm:text-9xl cursor-default"
           style={{ fontFamily: "Vermin Vibes, sans-serif" }}
         >
           Hi, I'm{" "}
-          <span className="text-primary-400" style={{ fontSize: "1.2em" }}>
+          <m.span className="text-primary-400" style={{ fontSize: "1.2em" }}>
             Valeriu
-          </span>
-        </h1>
-        <span
+          </m.span>
+        </m.h1>
+        <m.span
           className="cursor-pointer text-4xl sm:text-5xl underline underline-offset-4 decoration-primary-400"
           id="repulse-span"
           style={{ fontFamily: "Morganite Extra Bold, sans-serif" }}
         >
-          <span className="text-primary-400">Front-end</span> Developer
-        </span>
+          <m.span className="text-primary-400">Front-end</m.span> Developer
+        </m.span>
       </m.div>
     </LazyMotion>
   );

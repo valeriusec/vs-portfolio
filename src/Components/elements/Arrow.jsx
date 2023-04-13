@@ -19,7 +19,7 @@ const Arrow = () => {
       <path
         className="arrowpath"
         d="M16.7,178 c87.6-46.9,162.9-185.4,227-136.4C307.2,90.1,195,158.5,111,108.9C71,85.2,92.2,30.7,126,7"
-        marker-end="url(#pointer)"
+        markerEnd="url(#pointer)"
       />
     </svg>
   );

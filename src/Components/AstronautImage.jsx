@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 
 import {
   m,
@@ -29,21 +29,21 @@ const AstronautImage = () => {
   return (
     <div ref={ref} className="w-full h-full relative">
       <LazyMotion features={domAnimation} strict>
-        <div className="w-full h-full astro-path">
+        <m.div className="w-full h-full astro-path">
           <m.div 
           initial={{opacity: 0}}
           whileInView={{opacity: 1}}
           transition={{duration: 0.6, type: "spring"}}
           className="absolute top-[10%] sm:top-[10%] md:top-[10%] left-[-60%] sm:left-[-30%] md:left-[-15%] lg:left-[-5%] xl:left-[10%] w-fit h-fit flex flex-col rotate-[-30deg]">
-            <p
+            <m.p
               style={{ fontFamily: "La Belle Aurore, cursive" }}
-              className="text-grayscale-600 text-lg"
+              className="text-grayscale-600 text-lg noselect"
             >
               this is not me
-            </p>
-            <div className="w-32 h-32 rotate-[90deg]">
+            </m.p>
+            <m.div className="w-32 h-32 rotate-[90deg]">
               <Arrow />
-            </div>
+            </m.div>
           </m.div>
           <m.svg
             className="w-[90%] h-[90%] rotate-[-45deg]"
@@ -67,7 +67,7 @@ const AstronautImage = () => {
               d={astroPath}
             ></m.path>
           </m.svg>
-        </div>
+        </m.div>
       </LazyMotion>
     </div>
   );

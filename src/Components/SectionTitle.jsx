@@ -11,7 +11,7 @@ const SectionTitle = (props) => {
         transition={{ duration: 0.6, type: "spring" }}
         className="text-primary-600 p-6 noselect"
       >
-        <span
+        <m.span
           className="opacity-50"
           style={{
             textTransform: "uppercase",
@@ -20,13 +20,13 @@ const SectionTitle = (props) => {
           }}
         >
           {subtitle}
-        </span>
-        <h2
+        </m.span>
+        <m.h2
           className="tracking-wider text-6xl sm:text-8xl md:text-9xl"
           style={{ fontFamily: "Morganite Black"}}
         >
           {title}
-        </h2>
+        </m.h2>
       </m.div>
     </LazyMotion>
   );
