@@ -16,7 +16,12 @@ import {
   venomsoulProject,
   memojiHand,
   memojiHello,
-  memojiOk
+  memojiOk,
+  htmlCertificate,
+  cssCertificate,
+  jsCertificate,
+  reactCertificate,
+  webflowCertificate
 } from "../assets";
 
 const introduction = {
@@ -131,6 +136,16 @@ const projects = [
   },
 ];
 
+const certificates = {
+  image: [
+    htmlCertificate,
+    cssCertificate,
+    jsCertificate,
+    reactCertificate,
+    webflowCertificate,
+  ]
+}
+
 const memoji = {
   image: [
     memojiHello,
@@ -139,4 +154,4 @@ const memoji = {
   ]
 }
 
-export { introduction, journeys, projects, memoji };
+export { introduction, journeys, projects, certificates, memoji };

@@ -87,10 +87,10 @@ const Card = (props) => {
               backgroundRepeat: "no-repeat",
               backgroundImage: `url(${props.background})`,
             }}
-            className="h-[70%] w-[100%] rounded-t-[30px]"
+            className="noselect h-[70%] sm:h-[80%] w-[100%] rounded-t-[30px]"
           />
           <m.div
-            className="pt-10 pb-10 rounded-b-[30px] w-full h-fit absolute bg-primary-400 flex flex-col sm:flex-row items-center justify-between pr-10 pl-10"
+            className="h-[30%] sm:h-[20%] sm:p-10 rounded-b-[30px] w-full absolute bg-primary-400 flex flex-col sm:flex-row items-center justify-around md:justify-between"
             style={{ fontFamily: "Poppins, sans-serif" }}
           >
           

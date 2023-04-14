@@ -42,7 +42,7 @@ const ImageSlider = ({ images }) => {
           stiffness: 100,
           damping: 20,
         }}
-        className="w-full h-full blob"
+        className="w-full h-full blob drop-shadow-div"
         style={{ backgroundImage: `url(${images[index]})` }}
       ></m.div>
     </LazyMotion>

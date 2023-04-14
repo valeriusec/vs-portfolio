@@ -9,7 +9,7 @@ const Hero = () => {
     <LazyMotion features={domAnimation} strict>
       <m.div 
       id="hero"
-      className="relative w-full flex justify-center items-center ">
+      className="relative w-full flex justify-center items-center h-screen min-h-[800px]">
         <HeroText />
         <HeroParticles />
       </m.div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   AnimatePresence,
   LazyMotion,
@@ -12,15 +12,28 @@ import Card from "./Cards";
 
 const ProjectCards = () => {
   const [index, setIndex] = useState(0);
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  useEffect(() => {
+    const imagePromises = projects.map((project) => {
+      const image = new Image();
+      image.src = project.image;
+      return new Promise((resolve, reject) => {
+        image.onload = resolve;
+        image.onerror = reject;
+      });
+    });
+    Promise.all(imagePromises)
+      .then(() => setImagesLoaded(true))
+      .catch((error) => console.error(error));
+  }, []);
+
+  if (!imagesLoaded) {
+    return <div>Loading...</div>
+  }
 
   const nextIndex = () => {
     setIndex(index === projects.length - 1 ? 0 : index + 1);
-    setImageLoaded(false);
-  };
-
-  const handleImageLoaded = () => {
-    setImageLoaded(true);
   };
 
   return (
@@ -28,7 +41,7 @@ const ProjectCards = () => {
       <motion.div
         initial={{ x: -200 }}
         whileInView={{ x: 0 }}
-        className="w-full h-full flex justify-center items-center "
+        className="w-full h-full flex justify-center items-center"
       >
         <div className="w-full h-full flex justify-center items-center relative">
           {projects.map((project, i) => (
@@ -45,7 +58,6 @@ const ProjectCards = () => {
                       background={project.image}
                       title={project.name}
                       github={project.source_code_link}
-                      onLoad={handleImageLoaded}
                     />
                   </div>
                   <div className="absolute w-full h-full z-10 cursor-grab">
@@ -54,7 +66,6 @@ const ProjectCards = () => {
                       index={index}
                       background={project.image}
                       setIndex={nextIndex}
-                      onLoad={handleImageLoaded}
                     />
                   </div>
                 </div>

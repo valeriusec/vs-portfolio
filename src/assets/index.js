@@ -23,9 +23,16 @@ import venomsoulProject from './projects/venomsoul.png'
 
 //Memoji
 
-import memojiHand from './memoji/memoji_hand.png'
-import memojiHello from './memoji/memoji_hello.png'
-import memojiOk from './memoji/memoji_ok.png' 
+import memojiHand from './memoji/memoji_hand-min.png'
+import memojiHello from './memoji/memoji_hello-min.png'
+import memojiOk from './memoji/memoji_ok-min.png' 
+
+//Certificates
+import htmlCertificate from './certificates/Html_Codecademy_Certificate.png'
+import cssCertificate from './certificates/Css_Codecademy_Certificate.png'
+import jsCertificate from './certificates/JavaScript_Codecademy_Certificate.png'
+import reactCertificate from './certificates/React_Codecademy_Certificate.png'
+import webflowCertificate from './certificates/Webflow_101_Certificate.png'
 
 
 export {
@@ -48,4 +55,9 @@ export {
     memojiHand,
     memojiHello,
     memojiOk,
+    htmlCertificate,
+    cssCertificate,
+    jsCertificate,
+    reactCertificate,
+    webflowCertificate
 }
