@@ -10,7 +10,7 @@ import ImageSlider from "../Components/elements/ImageSlider";
 
 const About = () => {
   return (
-    <div className="w-full xl:w-[70%] mt-32 flex flex-col pb-16">
+    <div className="w-full xl:w-[70%] flex flex-col pb-16">
       <div className="w-full">
         <SectionTitle title="ABOUT ME" subtitle="Introduction" />
       </div>

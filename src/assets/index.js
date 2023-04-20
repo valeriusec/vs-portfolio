@@ -10,8 +10,13 @@ import reactIcon from './tech/reactjs.png'
 import threeIcon from './tech/threejs.svg'
 import tailwindIcon from './tech/tailwind.png'
 import gitIcon from './tech/git.png'
+import githubIcon from './tech/github.png'
 import figmaIcon from './tech/figma.png'
 import reduxIcon from './tech/redux.png'
+import gsapIcon from './tech/gsap.png'
+import shopifyIcon from './tech/shopify.png'
+import framerIcon from './tech/framer.png'
+import webflowIcon from './tech/webflow.svg'
 
 //Projects
 
@@ -45,8 +50,13 @@ export {
     threeIcon,
     tailwindIcon,
     gitIcon,
+    githubIcon,
     figmaIcon,
     reduxIcon,
+    gsapIcon,
+    shopifyIcon,
+    framerIcon,
+    webflowIcon,
     jammmingProject,
     fitclubProject,
     infopilotProject,

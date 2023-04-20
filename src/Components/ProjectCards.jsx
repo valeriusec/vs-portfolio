@@ -1,80 +1,59 @@
 import React, { useState, useEffect } from "react";
-import {
-  AnimatePresence,
-  LazyMotion,
-  domAnimation,
-  motion,
-} from "framer-motion";
-
+import { motion } from "framer-motion";
+import move from "lodash-move";
 import { projects } from "../Constants/constants";
 
-import Card from "./Cards";
+const projectsImages = projects.map((project) => {
+  return project.image;
+});
+
+const cardsOffset = 30;
+const scaleFactor = 0.06;
 
 const ProjectCards = () => {
-  const [index, setIndex] = useState(0);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
-
-  useEffect(() => {
-    const imagePromises = projects.map((project) => {
-      const image = new Image();
-      image.src = project.image;
-      return new Promise((resolve, reject) => {
-        image.onload = resolve;
-        image.onerror = reject;
-      });
-    });
-    Promise.all(imagePromises)
-      .then(() => setImagesLoaded(true))
-      .catch((error) => console.error(error));
-  }, []);
-
-  if (!imagesLoaded) {
-    return <div>Loading...</div>
-  }
-
-  const nextIndex = () => {
-    setIndex(index === projects.length - 1 ? 0 : index + 1);
+  const [cards, setCards] = useState(projectsImages);
+  const moveToEnd = (from) => {
+    setCards(move(cards, from, cards.length - 1));
   };
 
   return (
-    <LazyMotion features={domAnimation}>
-      <motion.div
-        initial={{ x: -200 }}
-        whileInView={{ x: 0 }}
-        className="w-full h-full flex justify-center items-center"
-      >
-        <div className="w-full h-full flex justify-center items-center relative">
-          {projects.map((project, i) => (
-            <AnimatePresence key={i}>
-              {index === i && (
-                <div className="w-full h-full absolute flex justify-center items-center">
-                  <div className="absolute w-full h-full z-20 cursor-grab">
-                    <Card
-                      key={`${i}-front`}
-                      frontCard={true}
-                      setIndex={nextIndex}
-                      index={index}
-                      drag="y"
-                      background={project.image}
-                      title={project.name}
-                      github={project.source_code_link}
-                    />
-                  </div>
-                  <div className="absolute w-full h-full z-10 cursor-grab">
-                    <Card
-                      frontCard={false}
-                      index={index}
-                      background={project.image}
-                      setIndex={nextIndex}
-                    />
-                  </div>
-                </div>
-              )}
-            </AnimatePresence>
-          ))}
-        </div>
-      </motion.div>
-    </LazyMotion>
+    <div className="flex w-full h-full justify-center items-center">
+      <motion.ul 
+      initial={{x: 200}}
+      whileInView={{x: 0}}
+      transition={{duration: 0.6, type: "spring"}}
+      className="relative w-[80%] h-[70%]">
+        {cards.map((image, index) => {
+          const canDrag = true;
+          return (
+            <motion.li
+              key={image}
+              style={{
+                backgroundImage: `url(${image})`,
+                backgroundSize: "cover",
+                cursor: canDrag ? "grab" : "auto",
+              }}
+              animate={{
+                top: index * -cardsOffset,
+                scale: 1 - index * scaleFactor,
+                zIndex: projectsImages.length - index,
+              }}
+              transition={{
+                duration: 0.2,
+                type: "spring",
+              }}
+              drag={canDrag ? "y" : false}
+              dragConstraints={{
+                top: 10,
+                bottom: 10,
+              }}
+              onDragEnd={() => moveToEnd(index)}
+              className="absolute w-full h-full bg-primary-400 origin-[top-center] list-none rounded-xl"
+            ></motion.li>
+          );
+        })}
+      </motion.ul>
+    </div>
   );
 };
 

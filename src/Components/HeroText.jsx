@@ -35,6 +35,7 @@ const HeroText = () => {
               }
               return (
                 <span
+                  key={index}
                   className="text-primary-400 bounce"
                   style={{ fontSize: "1.2em" }}
                 >

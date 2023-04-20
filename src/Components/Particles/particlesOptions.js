@@ -1,3 +1,5 @@
+import { skills } from "../../Constants/constants";
+
 // Hero section tsparticles options
 
 export const heroOptions = {
@@ -46,7 +48,7 @@ export const heroOptions = {
         mode: "bubble",
         parallax: {
           enable: true,
-          force: 300,
+          force: 350,
           smooth: 20,
         },
       },
@@ -105,11 +107,11 @@ export const heroOptions = {
       random: false,
       size: false,
       speed: 0.8,
-      outMode: 'bounce'
+      outMode: "bounce",
     },
     number: {
       limit: 0,
-      value: 30,
+      value: 40,
     },
 
     opacity: {
@@ -198,3 +200,4 @@ export const heroOptions = {
   pauseOnOutsideViewport: true,
   smooth: true,
 };
+
