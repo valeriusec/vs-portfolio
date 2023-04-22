@@ -1,5 +1,5 @@
 import SectionTitle from "../Components/SectionTitle";
-import { motion } from "framer-motion";
+import { m, LazyMotion, domAnimation } from "framer-motion";
 import { certificates } from "../Constants/constants";
 
 const Certificates = () => {
@@ -14,16 +14,18 @@ const Certificates = () => {
         </div>
         <div className="w-full h-full flex justify-center">
           <div className="w-[80%] flex flex-col sm:flex-row sm:flex-wrap justify-center gap-2">
-            {certificates.image.map((certificate, index) => (
-              <motion.div
-                key={index}
-                initial={{ x: 100 }}
-                whileInView={{ x: 0 }}
-                className="w-full sm:w-[48%] rounded-xl p-1 bg-primary-400"
-              >
-                <img className="w-full rounded-xl" src={certificate} />
-              </motion.div>
-            ))}
+            <LazyMotion features={domAnimation} strict>
+              {certificates.image.map((certificate, index) => (
+                <m.div
+                  key={index}
+                  initial={{ x: 100 }}
+                  whileInView={{ x: 0 }}
+                  className="w-full sm:w-[48%] rounded-xl p-1 bg-primary-400"
+                >
+                  <img className="w-full rounded-xl" src={certificate} />
+                </m.div>
+              ))}
+            </LazyMotion>
           </div>
         </div>
       </div>

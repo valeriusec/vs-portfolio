@@ -252,8 +252,8 @@ const markerSvg = `<svg viewBox="-4 0 36 36">
 
 const N = 1;  
 const globeData = [...Array(N).keys()].map(() => ({
-  lat: 46.2,
-  lng: -1.0,
+  lat: 48.0,
+  lng: 11.0,
   size: 20,
   color: "red",
 }));

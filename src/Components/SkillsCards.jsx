@@ -1,12 +1,14 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m, LazyMotion, domAnimation } from "framer-motion";
 import { skills } from "../Constants/constants";
 
 const SkillsCards = () => {
   return (
     <div className="flex">
+    <LazyMotion features={domAnimation} strict>
+
       {skills.map((skill, index) => (
-        <motion.div
+        <m.div
           initial={{ scale: 0.8 }}
           animate={{
             rotate: [0, 10, 0],
@@ -46,8 +48,9 @@ const SkillsCards = () => {
               {skill.description}
             </span>
           </div>
-        </motion.div>
+        </m.div>
       ))}
+    </LazyMotion>
     </div>
   );
 };

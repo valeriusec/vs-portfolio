@@ -21,12 +21,12 @@ const GlobeComponent = () => {
   useEffect(() => {
     globeEl.current.controls().autoRotate = false;
     globeEl.current.controls().autoRotateSpeed = 0.6;
-    globeEl.current.pointOfView({ lat: 46.2, lng: -1.0, altitude: 3 }, 4000);
+    globeEl.current.pointOfView({ lat: 48.0, lng: 11.0, altitude: 3 }, 4000);
     globeEl.current.controls().enableZoom = false;
   }, []);
 
   return (
-    <div className="w-full h-full flex items-center justify-center cursor-grab">
+    <div className="flex items-center justify-center cursor-grab">
       <Globe
         ref={globeEl}
         backgroundColor="rgba(0,0,0,0)"

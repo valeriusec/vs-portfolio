@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, LazyMotion, domAnimation } from "framer-motion";
 import move from "lodash-move";
 import { projects } from "../Constants/constants";
 
@@ -18,11 +18,14 @@ const ProjectCards = () => {
 
   return (
     <div className="flex w-full h-full justify-center items-center">
-      <motion.ul 
-      initial={{x: 200}}
-      whileInView={{x: 0}}
-      transition={{duration: 0.6, type: "spring"}}
-      className="relative w-[80%] h-[70%]">
+    <LazyMotion features={domAnimation}>
+
+      <motion.ul
+        initial={{ x: 200 }}
+        whileInView={{ x: 0 }}
+        transition={{ duration: 0.6, type: "spring" }}
+        className="relative w-[80%] h-[70%]"
+      >
         {cards.map((image, index) => {
           const canDrag = true;
           return (
@@ -53,6 +56,7 @@ const ProjectCards = () => {
           );
         })}
       </motion.ul>
+    </LazyMotion>
     </div>
   );
 };
