@@ -33,6 +33,17 @@ body {
   filter: drop-shadow(0 0 1.5rem #29c27f);
 }
 
+.message::after {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  background: #04975e;
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  border-radius: 0 0 0 100%;
+}
+
 #repulse-div {
   -webkit-appearance: none;
   appearance: none;

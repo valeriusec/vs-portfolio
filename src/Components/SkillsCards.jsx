@@ -1,14 +1,25 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { skills } from "../Constants/constants";
 
 const SkillsCards = () => {
   return (
     <div className="flex">
       {skills.map((skill, index) => (
-        <div
+        <motion.div
+          initial={{ scale: 0.8 }}
+          animate={{
+            rotate: [0, 10, 0],
+          }}
+          transition={{
+            duration: 1,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "linear",
+          }}
           style={{ zIndex: `${index + 1}`, transition: "all 0.6s" }}
           key={index}
-          className="card w-[300px] h-[300px] flex flex-col items-center  bg-primary-400 rounded-xl border-4 border-primary-600 cursor-pointer scale-[0.8] hover:scale-[0.9]"
+          className="card w-[300px] h-[300px] flex flex-col items-center  bg-primary-400 rounded-xl border-4 border-primary-600 cursor-pointer"
         >
           <div className="w-full h-[60px] flex items-center gap-2 p-1 flex-col">
             <img
@@ -35,7 +46,7 @@ const SkillsCards = () => {
               {skill.description}
             </span>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
