@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import Globe from "react-globe.gl";
 import { globeTexture } from "../assets";
 import { globeData, markerSvg } from "../Constants/constants";
@@ -27,27 +27,28 @@ const GlobeComponent = () => {
 
   return (
     <div className="flex items-center justify-center cursor-grab">
-      <Globe
-        ref={globeEl}
-        backgroundColor="rgba(0,0,0,0)"
-        globeImageUrl={globeTexture}
-        htmlElementsData={globeData}
-        htmlElement={(d) => {
-          const el = document.createElement("div");
-          el.innerHTML = markerSvg;
-          el.style.color = d.color;
-          el.style.width = `${d.size}px`;
+      
+        <Globe
+          ref={globeEl}
+          backgroundColor="rgba(0,0,0,0)"
+          globeImageUrl={globeTexture}
+          htmlElementsData={globeData}
+          htmlElement={(d) => {
+            const el = document.createElement("div");
+            el.innerHTML = markerSvg;
+            el.style.color = d.color;
+            el.style.width = `${d.size}px`;
 
-          el.style["pointer-events"] = "auto";
-          el.style.cursor = "pointer";
-          el.onclick = () => console.info(d);
-          return el;
-        }}
-        atmosphereColor="#29c27f"
-        width={isMobile ? 600 : 1000}
-        height={isMobile ? 600 : 1000}
-      />
-    </div>
+            el.style["pointer-events"] = "auto";
+            el.style.cursor = "pointer";
+            el.onclick = () => console.info(d);
+            return el;
+          }}
+          atmosphereColor="#29c27f"
+          width={isMobile ? 600 : 1000}
+          height={isMobile ? 600 : 1000}
+        />
+      </div>
   );
 };
 

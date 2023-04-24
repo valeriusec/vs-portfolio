@@ -1,15 +1,14 @@
-import React from "react";
 import { m, LazyMotion, domAnimation } from "framer-motion";
 
 const HeroText = () => {
   const name = "Valeriu";
 
   return (
-    <LazyMotion features={domAnimation} strict>
-      <m.div
-        className="noselect w-fit h-fit text-grayscale-50 absolute z-10 flex flex-col justify-center items-center rounded-[50%]"
-        id="repulse-div"
-      >
+    <div
+      className="noselect w-fit h-fit text-grayscale-50 absolute z-10 flex flex-col justify-center items-center rounded-[50%]"
+      id="repulse-div"
+    >
+      <LazyMotion features={domAnimation} strict>
         <m.h1
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -53,10 +52,10 @@ const HeroText = () => {
           id="repulse-span"
           style={{ fontFamily: "Morganite Extra Bold, sans-serif" }}
         >
-          <m.span className="text-primary-400">Front-end</m.span> Developer
+          <span className="text-primary-400">Front-end</span> Developer
         </m.span>
-      </m.div>
-    </LazyMotion>
+      </LazyMotion>
+    </div>
   );
 };
 

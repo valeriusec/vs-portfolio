@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion, LazyMotion, domAnimation } from "framer-motion";
 import move from "lodash-move";
 import { projects } from "../Constants/constants";

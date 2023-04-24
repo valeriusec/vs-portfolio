@@ -1,5 +1,4 @@
-import React, { useRef, useState } from "react";
-
+import { useRef, useState } from "react";
 import {
   m,
   useScroll,
@@ -7,9 +6,7 @@ import {
   LazyMotion,
   domAnimation,
 } from "framer-motion";
-
 import { astroPath } from "../Constants/astroPath";
-import Arrow from "./elements/Arrow";
 import BgQuote from "./elements/BgQuote";
 
 const AstronautImage = () => {
@@ -29,18 +26,18 @@ const AstronautImage = () => {
 
   return (
     <div ref={ref} className="w-full h-full relative">
-      <LazyMotion features={domAnimation} strict>
-        <m.div className="w-full h-full astro-path">
-            <BgQuote text="this is not me"/>
-          <m.svg
-            className="w-[90%] h-[90%] rotate-[-45deg]"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            width="860"
-            height="1750"
-            viewBox="0, 0, 860,1750"
-            version="1.1"
-          >
+      <div className="w-full h-full astro-path">
+        <BgQuote text="this is not me" />
+        <svg
+          className="w-[90%] h-[90%] rotate-[-45deg]"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="860"
+          height="1750"
+          viewBox="0, 0, 860,1750"
+          version="1.1"
+        >
+          <LazyMotion features={domAnimation} strict>
             <m.path
               initial={{ pathLength: 0, x: 300 }}
               animate={{ pathLength: isInView ? 0.5 : 0, x: 0 }}
@@ -53,13 +50,11 @@ const AstronautImage = () => {
               stroke-miterlimit="0.1"
               d={astroPath}
             ></m.path>
-          </m.svg>
-        </m.div>
-      </LazyMotion>
+          </LazyMotion>
+        </svg>
+      </div>
     </div>
   );
 };
 
 export default AstronautImage;
-
-

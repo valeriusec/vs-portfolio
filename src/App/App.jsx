@@ -4,10 +4,12 @@ import About from "../Pages/About";
 import Certificates from "../Pages/Certificates";
 import Skills from "../Pages/Skills";
 import Contact from "../Pages/Contact";
+import NavBar from "../Components/nav/NavBar";
 
 function App() {
   return (
     <>
+      <NavBar />
       <Hero />
       <About />
       <Projects />

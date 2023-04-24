@@ -1,9 +1,5 @@
-import React from "react";
-
 import { m, LazyMotion, domAnimation } from "framer-motion";
-
 import SectionTitle from "../Components/SectionTitle";
-
 import { memoji } from "../Constants/constants";
 import { introduction } from "../Constants/constants";
 import ImageSlider from "../Components/elements/ImageSlider";
@@ -31,13 +27,10 @@ const About = () => {
                 style={{ fontFamily: "Poppins, sans-serif" }}
                 className="text-grayscale-50 p-6 text-center flex flex-col gap-6"
               >
-                <m.span className="text-primary-400">
-                  {introduction.text[0]}
-                </m.span>
-                <m.span>{introduction.text[1]}</m.span>
-
-                <m.span>{introduction.text[2]}</m.span>
-                <m.span>{introduction.text[3]}</m.span>
+                <span className="text-primary-400">{introduction.text[0]}</span>
+                <span>{introduction.text[1]}</span>
+                <span>{introduction.text[2]}</span>
+                <span>{introduction.text[3]}</span>
               </m.p>
             </LazyMotion>
           </div>

@@ -1,3 +1,9 @@
+//Logo
+import logoWhite from './logo/logo_white.png'
+import logoBlack from './logo/logo_black.png'
+
+//Astro
+
 import astronaut from './astronaut/astronaut_green.svg'
 
 //Tech
@@ -73,4 +79,6 @@ export {
     reactCertificate,
     webflowCertificate,
     globeTexture,
+    logoWhite,
+    logoBlack,
 }

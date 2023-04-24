@@ -1,4 +1,3 @@
-import React from "react";
 import { m, LazyMotion, domAnimation } from "framer-motion";
 
 const SectionTitle = (props) => {
@@ -12,7 +11,7 @@ const SectionTitle = (props) => {
         transition={{ duration: 0.6, type: "spring" }}
         className="text-primary-600 p-6 noselect"
       >
-        <m.span
+        <span
           className="opacity-50"
           style={{
             textTransform: "uppercase",
@@ -21,8 +20,8 @@ const SectionTitle = (props) => {
           }}
         >
           {subtitle}
-        </m.span>
-        <m.h2
+        </span>
+        <h2
           className="tracking-wider text-7xl sm:text-8xl md:text-9xl"
           style={{ fontFamily: "Morganite Black"}}
         >
@@ -32,7 +31,7 @@ const SectionTitle = (props) => {
             }
             return <span key={index} className="bounce">{char}</span>
           })}
-        </m.h2>
+        </h2>
       </m.div>
     </LazyMotion>
   );

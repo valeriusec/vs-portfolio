@@ -18,7 +18,9 @@
     "font-awesome": "^4.7.0",
     "framer-motion": "^10.11.2",
     "gsap": "^3.11.5",
+    "localforage": "^1.10.0",
     "lodash-move": "^1.1.1",
+    "match-sorter": "^6.3.1",
     "normalize-wheel": "^1.0.1",
     "pathseg": "^1.2.1",
     "react": "^18.2.0",
@@ -32,6 +34,7 @@
     "react-simple-typewriter": "^5.0.1",
     "react-tsparticles": "^2.9.3",
     "react-use": "^17.4.0",
+    "sort-by": "^1.2.0",
     "tsparticles": "^2.9.3"
   },
   "devDependencies": {

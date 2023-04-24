@@ -1,3 +1,15 @@
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faX,
+  faBars,
+  faWindowRestore,
+  faBagShopping,
+  faDiceD6,
+} from "@fortawesome/free-solid-svg-icons";
+import { faReact, faGithub, faYoutube, faTiktok } from "@fortawesome/free-brands-svg-icons";
+
+library.add(faX, faBars, faWindowRestore, faBagShopping, faDiceD6);
+
 import {
   codecademy,
   htmlIcon,
@@ -28,6 +40,18 @@ import {
   reactCertificate,
   webflowCertificate,
 } from "../assets";
+
+const icons = {
+  faBars,
+  faX,
+  faWindowRestore,
+  faBagShopping,
+  faDiceD6,
+  faReact,
+  faGithub,
+  faYoutube,
+  faTiktok
+};
 
 const introduction = {
   text: [
@@ -250,7 +274,7 @@ const markerSvg = `<svg viewBox="-4 0 36 36">
     <circle fill="black" cx="14" cy="14" r="7"></circle>
   </svg>`;
 
-const N = 1;  
+const N = 1;
 const globeData = [...Array(N).keys()].map(() => ({
   lat: 48.0,
   lng: 11.0,
@@ -267,4 +291,5 @@ export {
   skills,
   markerSvg,
   globeData,
+  icons,
 };

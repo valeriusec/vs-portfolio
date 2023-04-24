@@ -1,5 +1,3 @@
-import { skills } from "../../Constants/constants";
-
 // Hero section tsparticles options
 
 export const heroOptions = {
@@ -37,6 +35,18 @@ export const heroOptions = {
         },
         {
           selectors: "#repulse-span",
+          enable: true,
+          mode: "bounce",
+          type: "circle",
+        },
+        {
+          selectors: "#togglebutton",
+          enable: true,
+          mode: "repulse",
+          type: "circle",
+        },
+        {
+          selectors: "#togglebutton",
           enable: true,
           mode: "bounce",
           type: "circle",

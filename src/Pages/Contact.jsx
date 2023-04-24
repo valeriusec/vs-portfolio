@@ -1,4 +1,4 @@
-import React from "react";
+import { m, LazyMotion, domAnimation } from "framer-motion";
 import SectionTitle from "../Components/SectionTitle";
 import ContactServices from "../Components/ContactServices";
 import ContactForm from "../Components/ContactForm";
@@ -12,10 +12,16 @@ const Contact = () => {
           <SectionTitle title="CONTACT" subtitle="Get in touch" />
         </div>
         <div className="w-full flex justify-center items-center">
-          <div className="w-full sm:w-[90%] md:w-[80%] sm:h-[600px] rounded-xl border-4 border-primary-400 p-4 flex flex-col sm:flex-row gap-4">
+        <LazyMotion features={domAnimation} strict>
+          <m.div
+           initial={{x: 200}}
+           whileInView={{x: 0}}
+           transition={{duration: 0.6, type: "spring"}} 
+           className="w-full sm:w-[90%] md:w-[80%] sm:h-[600px] rounded-xl border-4 border-primary-400 p-4 flex flex-col sm:flex-row gap-4">
             <ContactServices />
             <ContactForm />
-          </div>
+          </m.div>
+        </LazyMotion>
         </div>
         <GlobeComponent />
       </div>

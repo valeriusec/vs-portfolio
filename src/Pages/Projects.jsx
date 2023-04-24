@@ -1,4 +1,3 @@
-import React from "react";
 import AstronautImage from "../Components/AstronautImage";
 import SectionTitle from "../Components/SectionTitle";
 import ProjectCards from "../Components/ProjectCards";
