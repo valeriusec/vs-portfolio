@@ -40,8 +40,8 @@ const NavBar = () => {
     >
       <ToggleButton isActive={isActive} handleClick={handleClick} />
       <div className={`${isActive ? "flex flex-col w-full h-full" : "hidden"}`}>
-        <NavHeader />
-        <NavLinks />
+        <NavHeader handleClick={handleClick}/>
+        <NavLinks handleClick={handleClick}/>
         <SocialLinks />
       </div>
     </nav>

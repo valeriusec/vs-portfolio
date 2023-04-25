@@ -31,7 +31,7 @@ const AstronautImage = () => {
         <svg
           className="w-[90%] h-[90%] rotate-[-45deg]"
           xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
           width="860"
           height="1750"
           viewBox="0, 0, 860,1750"

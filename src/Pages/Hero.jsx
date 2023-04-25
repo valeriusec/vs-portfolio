@@ -4,6 +4,7 @@ import HeroParticles from "../Components/Particles/HeroParticles";
 
 const Hero = () => {
   return (
+    <div id="hero" className="w-full flex justify-center overflow-hidden-web">
     <LazyMotion features={domAnimation} strict>
       <m.div
         id="hero"
@@ -13,6 +14,7 @@ const Hero = () => {
         <HeroParticles />
       </m.div>
     </LazyMotion>
+    </div>
   );
 };
 

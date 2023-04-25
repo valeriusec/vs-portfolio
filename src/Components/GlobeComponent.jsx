@@ -10,7 +10,7 @@ const GlobeComponent = () => {
   useEffect(() => {
     const handleResize = () => {
       const viewPort = window.innerWidth;
-      setIsMobile(viewPort < 600);
+      setIsMobile(viewPort < 850);
     };
 
     window.addEventListener("resize", handleResize);
@@ -27,7 +27,6 @@ const GlobeComponent = () => {
 
   return (
     <div className="flex items-center justify-center cursor-grab">
-      
         <Globe
           ref={globeEl}
           backgroundColor="rgba(0,0,0,0)"
@@ -45,8 +44,8 @@ const GlobeComponent = () => {
             return el;
           }}
           atmosphereColor="#29c27f"
-          width={isMobile ? 600 : 1000}
-          height={isMobile ? 600 : 1000}
+          width={isMobile ? 400 : 1000}
+          height={isMobile ? 400 : 1000}
         />
       </div>
   );

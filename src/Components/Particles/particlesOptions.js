@@ -121,7 +121,7 @@ export const heroOptions = {
     },
     number: {
       limit: 0,
-      value: 40,
+      value: 30,
     },
 
     opacity: {

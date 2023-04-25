@@ -1,8 +1,9 @@
 import { logoWhite } from "../../assets/index";
 
-const NavHeader = () => {
+const NavHeader = ({handleClick}) => {
   return (
     <div className="w-full h-[200px] flex flex-col items-center justify-end gap-4 p-4 bg-grayscale-950">
+      <a href="#hero" onClick={handleClick}>
       <img
         className="cursor-pointer bounce object-cover w-[100px] h-[100px]"
         src={logoWhite}
@@ -13,6 +14,7 @@ const NavHeader = () => {
       >
         Valeriu
       </span>
+      </a>
       <span className="text-sm text-grayscale-300">Front-end Developer</span>
     </div>
   );

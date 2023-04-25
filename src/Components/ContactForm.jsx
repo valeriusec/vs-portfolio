@@ -1,6 +1,34 @@
+import { useRef, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
+  const [isSent, setIsSent] = useState(false);
+  const form = useRef();
+  const env = import.meta.env;
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        env.VITE_REACT_APP_EJS_SERVICE,
+        env.VITE_REACT_APP_EJS_TEMPLATE,
+        form.current,
+        env.VITE_REACT_APP_EJS_KEY
+      )
+      .then(
+        (result) => {
+          document.getElementById("contact_form").reset();
+          setIsSent(true);
+        },
+        (error) => {
+          console.error(error);
+          setIsSent(false);
+        }
+      );
+  };
+
   return (
     <div
       style={{
@@ -20,47 +48,60 @@ const ContactForm = () => {
       </div>
       <div className="w-full flex justify-center">
         <form
+          id="contact_form"
+          ref={form}
+          method="POST"
+          target="_blank"
+          onSubmit={sendEmail}
           style={{ fontFamily: "Poppins, sans-serif" }}
           className="w-[80%] h-full flex flex-col gap-4 pt-4 text-grayscale-200"
         >
           <div className="w-full flex flex-col">
             <label htmlFor="firstname">First Name</label>
             <input
-              className="p-[0.5em] rounded-xl"
+              className="p-[0.5em] rounded-xl text-grayscale-950"
               placeholder="Enter your First Name"
               id="firstname"
               type="text"
+              name="user_name"
+              required
             />
           </div>
           <div className="w-full flex flex-col">
             <label htmlFor="lastname">Last Name</label>
             <input
-              className="p-[0.5em] rounded-xl"
+              className="p-[0.5em] rounded-xl text-grayscale-950"
               placeholder="Enter your Last Name"
               id="lastname"
               type="text"
+              required
             />
           </div>
           <div className="w-full flex flex-col">
             <label htmlFor="email">E-mail</label>
             <input
-              className="p-[0.5em] rounded-xl"
+              className="p-[0.5em] rounded-xl text-grayscale-950"
               placeholder="Enter your E-mail"
               id="email"
               type="email"
+              name="user_email"
+              required
             />
           </div>
           <div className="w-full flex flex-col">
             <label>Message</label>
             <textarea
-              className="p-[0.5em] rounded-xl"
+              className="p-[0.5em] rounded-xl text-grayscale-950"
               placeholder="Enter your message..."
+              required
             ></textarea>
           </div>
           <div className="w-full flex justify-center">
             <input
-              className="w-[100px] h-[50px] bg-primary-600 rounded-xl"
+              className="w-[100px] h-[50px] bg-primary-600 rounded-xl cursor-pointer hover:bg-primary-700"
               type="submit"
+              value={!isSent ? 'Send' : 'Done!'}
+              
             />
           </div>
         </form>

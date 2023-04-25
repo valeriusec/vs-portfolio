@@ -4,7 +4,7 @@ import { certificates } from "../Constants/constants";
 
 const Certificates = () => {
   return (
-    <div className="w-full overflow-hidden-web flex justify-center">
+    <div id="certificates" className="w-full overflow-hidden-web flex justify-center">
       <div className="w-full min-h-[800px] flex flex-col xl:w-[70%]">
         <div className="w-full">
           <SectionTitle
