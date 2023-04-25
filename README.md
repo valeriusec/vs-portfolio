@@ -83,5 +83,4 @@ This project was created by [Valeriu Secrieru](https://www.github.com/valeriusec
 - [Tailwind CSS](https://tailwindcss.com/)
 - and other open-source libraries and tools.
 
-The project also uses the following third-party libraries:
 
