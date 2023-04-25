@@ -44,6 +44,35 @@ import {
   webflowCertificate,
 } from "../assets";
 
+const media = {
+  codecademy,
+  htmlIcon,
+  cssIcon,
+  jsIcon,
+  reactIcon,
+  threeIcon,
+  tailwindIcon,
+  reduxIcon,
+  gitIcon,
+  githubIcon,
+  gsapIcon,
+  shopifyIcon,
+  webflowIcon,
+  framerIcon,
+  figmaIcon,
+  jammmingProject,
+  teslaProject,
+  venomsoulProject,
+  memojiHand,
+  memojiHello,
+  memojiOk,
+  htmlCertificate,
+  cssCertificate,
+  jsCertificate,
+  reactCertificate,
+  webflowCertificate,
+}
+
 const icons = {
   faBars,
   faX,
@@ -270,6 +299,7 @@ const globeData = [...Array(N).keys()].map(() => ({
 }));
 
 export {
+  media,
   introduction,
   journeys,
   projects,

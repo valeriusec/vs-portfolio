@@ -51,6 +51,18 @@ export const heroOptions = {
           mode: "bounce",
           type: "circle",
         },
+        {
+          selectors: "#scroller",
+          enable: true,
+          mode: "repulse",
+          type: "circle",
+        },
+        {
+          selectors: "#scroller",
+          enable: true,
+          mode: "bounce",
+          type: "circle",
+        },
       ],
 
       onHover: {

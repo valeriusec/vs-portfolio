@@ -52,7 +52,9 @@ const HeroText = () => {
           id="repulse-span"
           style={{ fontFamily: "Morganite Extra Bold, sans-serif" }}
         >
+        <a href="#about">
           <span className="text-primary-400">Front-end</span> Developer
+        </a>
         </m.span>
       </LazyMotion>
     </div>

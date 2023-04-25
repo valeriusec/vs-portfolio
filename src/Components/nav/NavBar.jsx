@@ -39,7 +39,7 @@ const NavBar = () => {
       }`}
     >
       <ToggleButton isActive={isActive} handleClick={handleClick} />
-      <div className={`${isActive ? "flex flex-col w-full h-full" : "hidden"}`}>
+      <div className={`${isActive ? "flex flex-col w-full h-full" : "hidden"} overflow-y-auto`}>
         <NavHeader handleClick={handleClick}/>
         <NavLinks handleClick={handleClick}/>
         <SocialLinks />

@@ -63,7 +63,7 @@ const ContactForm = () => {
               placeholder="Enter your First Name"
               id="firstname"
               type="text"
-              name="user_name"
+              name="from_name"
               required
             />
           </div>
@@ -74,6 +74,7 @@ const ContactForm = () => {
               placeholder="Enter your Last Name"
               id="lastname"
               type="text"
+              name="from_last"
               required
             />
           </div>
@@ -84,7 +85,7 @@ const ContactForm = () => {
               placeholder="Enter your E-mail"
               id="email"
               type="email"
-              name="user_email"
+              name="from_email"
               required
             />
           </div>
@@ -93,6 +94,7 @@ const ContactForm = () => {
             <textarea
               className="p-[0.5em] rounded-xl text-grayscale-950"
               placeholder="Enter your message..."
+              name="message"
               required
             ></textarea>
           </div>

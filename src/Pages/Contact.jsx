@@ -3,10 +3,14 @@ import SectionTitle from "../Components/SectionTitle";
 import ContactServices from "../Components/ContactServices";
 import ContactForm from "../Components/ContactForm";
 import GlobeComponent from "../Components/GlobeComponent";
+import SocialLinks from "../Components/SocialLinks";
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full overflow-hidden-web flex justify-center">
+    <div
+      id="contact"
+      className="w-full overflow-hidden-web flex flex-col items-center"
+    >
       <div className="w-full min-h-[800px] flex flex-col xl:w-[70%]">
         <div className="w-full">
           <SectionTitle title="CONTACT" subtitle="Get in touch" />
@@ -25,6 +29,14 @@ const Contact = () => {
           </LazyMotion>
         </div>
         <GlobeComponent />
+      </div>
+      <div className="w-full flex flex-col">
+        <SocialLinks />
+        <div className="bg-grayscale-950 flex justify-center pb-4 text-grayscale-400">
+          <span>
+            Created by <em>Valeriu Secrieru</em>
+          </span>
+        </div>
       </div>
     </div>
   );

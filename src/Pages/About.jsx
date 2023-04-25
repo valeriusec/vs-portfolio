@@ -11,7 +11,6 @@ const About = () => {
         <div className="w-full">
           <SectionTitle title="ABOUT ME" subtitle="Introduction" />
         </div>
-
         <div className="w-full flex flex-col-reverse sm:flex-row">
           <div className="w-full md:w-[50%] md:h-full flex items-center mt-10">
             <LazyMotion features={domAnimation} strict>
