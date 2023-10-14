@@ -57,7 +57,7 @@ Dev Dependencies:
 
 To run this project locally, you need to have Node.js and npm installed on your machine. Then, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/my-portfolio.git`
+1. Clone the repository: `git clone https://github.com/valeriusec/vs-portfolio`
 2. Navigate to the project directory: `cd my-portfolio`
 3. Install the dependencies: `npm install`
 4. Start the development server: `npm run dev`
